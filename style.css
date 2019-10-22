@@ -1,0 +1,36 @@
+body{
+    background-color: darkgrey;
+    margin: 0 auto;
+}
+button {
+    background-color: #44c767;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    color: #ff7fff;
+    font-family: Arial;
+    font-size: 25px;
+    padding: 24px 14px;
+    text-decoration: none;
+    margin-left: 140px;
+    margin-top: 30px;
+}
+h1{
+    margin-left: 220px;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #5cbf2a;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+#box{
+    width: 700px;
+    height: 300px;
+    margin: auto;
+    margin-top: 60px;
+}
