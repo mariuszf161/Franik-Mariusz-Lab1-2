@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0px;
+    background: rgb(54, 52, 52);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 1000px;
+    height: 700px;
+    background: red;
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 1000px;
+    height: 100px;
+    background: orange;
+}
+
+#canvas {
+    background: white;
+    border: 1px solid black;
+}
+
+.brushes {
+    float: left;
+}
+
+.filters {
+    float: right;
+    background-color: orange;
+}
+
+.Filter {
+    width: 64px;
+    height: 64px;
+    margin-top: 15px;
+    margin-right: 20px;
+    background: orange;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.Filter img {
+    width: 100%;
+    height: 100%;
+    background: orange;
+}
+
+.Filter:hover {
+    border: 3px solid black;
+}
+
+.text1 {
+    margin-right: 10px;
+}
+
+#clear a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}

@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    
-    <script src="scritp.js"></script>
+    <div class="container">
+        <div class="navbar">
+            <div class="brushes"></div>
+            <button class="clear"><a class="costam" href="index.html">
+            </a><img src="./img/eraserl.png" title="Clear"></button>
+            <div class="filters">
+                <button class="Filter" id="darken">
+                    <img src="./img/ciemny.png" title="Przyciemnij">
+                </button>
+                <button class="Filter" id="lighten">
+                    <img src="./img/lightbulb.png" title="Rozjaśnij">
+                </button>
+                <button class="Filter" id="blur">
+                    <img src="./img/blur.png" title="Rozmycie">
+                </button>
+                <button class="Filter" id="negative">
+                    <img src="./img/negative.png" title="Rozmycie">
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="wapper">
+            <canvas id="canvas" width="998" height="600"></canvas>
+        </div>
+    </div>
 </body>
 </html>
