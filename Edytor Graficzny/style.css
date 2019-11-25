@@ -24,11 +24,12 @@ img {
 
 #canvas {
     background: white;
-    border: 1px solid black;
 }
 
 .brushes {
     float: left;
+    background: orange;
+    margin-left: 20px;
 }
 
 .filters {
@@ -69,4 +70,52 @@ img {
 a:visited {
     text-decoration: none;
     color: black;
+    background: orange;
+}
+#red {
+    width: 30px;
+    height: 30px;
+    background: red;
+    margin-left: 40px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#green {
+    width: 30px;
+    height: 30px;
+    background: green;
+    margin-left: 40px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#yellow {
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    margin-left: 40px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#blue {
+    width: 30px;
+    height: 30px;
+    background: blue;
+    margin-left: 40px;
+    display: inline-block;
+    border-radius: 10px;
+}
+#blue:hover{
+    border: 2px solid white;
+}
+#red:hover {
+    border: 2px solid white;
+}
+#green:hover {
+    border: 2px solid white;
+}
+#yellow:hover {
+    border: 2px solid white;
 }

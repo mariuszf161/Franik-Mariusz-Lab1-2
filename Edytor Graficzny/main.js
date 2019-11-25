@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', appStart)
 
-let canvas
-let ctx
+let canvas;
+let ctx;
+let brushStyle;
+let mouseDown;
 
 function appStart(){
     canvas = document.querySelector('#canvas')
@@ -18,7 +20,38 @@ function appStart(){
     document
         .querySelector('#negative')
         .addEventListener('click', () => negativeFilter())
-
+    document
+        .querySelector('#square')
+        .addEventListener('click', () => {
+            painting()
+            brushSquare()
+        })
+    document
+        .querySelector('#circle')
+        .addEventListener('click', () => {
+            painting()
+            brushCircle()
+    })
+    document
+        .querySelector('#green')
+        .addEventListener('click', () => {
+            green()
+        })
+    document
+        .querySelector('#blue')
+        .addEventListener('click', () => {
+            blue()
+        })
+    document
+        .querySelector('#red')
+        .addEventListener('click', () => {
+            red()
+        })
+    document
+        .querySelector('#yellow')
+        .addEventListener('click', () => {
+            yellow()
+        })
 
     drawImage()
 }
@@ -70,5 +103,73 @@ function negativeFilter(amount = 20) {
     ctx.putImageData(canvasData, 0, 0)
 }
 
+function painting() {
+    canvas.addEventListener('mousedown', down)
+    canvas.addEventListener('mouseup', toggledrawer)
+    canvas.addEventListener('mousemove',
+        function (e) {
+            let mosuePos = getMousePos(canvas, e)
+            let posx = mosuePos.x
+            let posy = mosuePos.y
+            let brushStyle = "square"
+            draw(canvas, posx, posy, brushStyle)
+        })
+
+    function down() {
+        mouseDown = true
+    }
+
+    function toggledrawer() {
+        mouseDown = false
+    }
+
+    function getMousePos(canvas, e) {
+        let rect = canvas.getBoundingClientRect()
+        return {
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        }
+    }
+
+    function draw(canvas, posx, posy) {
+        let context = canvas.getContext('2d')
+
+        if (mouseDown) {
+            if (brushStyle == "square") {
+                context.fillRect(posx, posy, 15, 15)
+                context.fillStyle = brushColor
+            } else if (brushStyle == "circle") {
+                context.beginPath()
+                context.arc(posx, posy, 8, 0, 2 * Math.PI)
+                context.fill()
+                context.fillStyle = brushColor
+            }
+        }
+    }
+}
+
+function brushCircle() {
+    brushStyle = "circle"
+}
+
+function brushSquare() {
+    brushStyle = "square"
+}
+
+function green() {
+    brushColor = 'green'
+}
+
+function blue() {
+    brushColor = 'blue'
+}
+
+function red() {
+    brushColor = 'red'
+}
+
+function yellow() {
+    brushColor = 'yellow'
+}
 
 
