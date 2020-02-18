@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <title>NotePocket</title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <textarea id="title" placeholder="Tytuł..."rows="1" cols="30"></textarea>
+        <textarea id="message" placeholder="Treść..."rows="3" cols="30"></textarea>
+        <div class="Btn">
+            <input type="color" value="#f6b73c" id="color">
+            <span id="textBtn"><input type="checkbox" id="pinBT">Przypnij notatkę</span>
+            <button id="addNoteBtn">DODAJ NOTATKE</button>
+        </div>
+    </div>
+    <div id="notes"></div>
+    <script src="note.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
