@@ -75,10 +75,9 @@ function darkenFilter(amount = 20) {
 function lightenFilter(amount = 20) {
     const canvasData = ctx.getImageData(0, 0, 500, 500)
     for (let i = 0; i < canvasData.data.length; i += 4) {
-        canvasData.data[i] -= amount
-        canvasData.data[i + 1] -= amount
-        canvasData.data[i + 2] -= amount
-        canvasData.data[i + 3] -= amount
+        canvasData.data[i] += amount
+        canvasData.data[i + 1] += amount
+        canvasData.data[i + 2] += amount
     }
     ctx.putImageData(canvasData, 0, 0)
 }
@@ -111,8 +110,7 @@ function painting() {
             let mosuePos = getMousePos(canvas, e)
             let posx = mosuePos.x
             let posy = mosuePos.y
-            let brushStyle = "square"
-            draw(canvas, posx, posy, brushStyle)
+            draw(canvas, posx, posy)
         })
 
     function down() {

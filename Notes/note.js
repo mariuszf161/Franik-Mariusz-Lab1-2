@@ -9,8 +9,5 @@ class Note {
         let time = data.toLocaleTimeString()
         this.currentdate = date + ' ' + time
     }
-    addToLocalStorage(note) {
-        localStorage.setItem(localStorage, JSON.stringify(note));
-    }
 
 }

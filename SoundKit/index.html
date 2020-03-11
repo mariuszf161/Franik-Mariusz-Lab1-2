@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>DrumKit</title>
+</head>
+
+<body>
+   <div id="wrapper">
+        <span id="title"><h1>DrumKit</h1></span>
+       
+        <div class="menuBtn">
+            <div class="ch1">
+                <button id="channel1R">RECORD CHANNEL 1</button>
+                <button id="channel1P">PLAY CHANNEL 1</button>
+            </div>
+            <div class="ch2">
+                <button id="channel2R">RECORD CHANNEL 2</button>
+                <button id="channel2P">PLAY CHANNEL 2</button>
+            </div>
+            <div class="ch3">
+                <button id="channel3R">RECORD CHANEL 3</button>
+                <button id="channel3P">PLAY CHANNEL 3</button>
+            </div>
+            <div class="ch4">
+                <button id="channel4R">RECORD CHANNEL 4</button>
+                <button id="channel4P">PLAY CHANNEL 4</button>
+            </div>            
+        </div>   
+        <div class="keys">
+            <div class="key">
+                <kbd>Q</kbd>
+                <span class="sound">BOOM</span>
+                <audio src="./sounds/boom.wav" id="boom"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>W</kbd>
+                <span class="sound">CLAP</span>
+                <audio src="./sounds/clap.wav" id="clap"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>E</kbd>
+                <span class="sound">HIHAT</span>
+                <audio src="./sounds/hihat.wav" id="hihat"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>A</kbd>
+                <span class="sound">KICK</span>
+                <audio src="./sounds/kick.wav" id="kick"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>S</kbd>
+                <span class="sound">OPENHAT</span>
+                <audio src="./sounds/openhat.wav" id="openhat"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>D</kbd>
+                <span class="sound">RIDE</span>
+                <audio src="./sounds/ride.wav" id="ride"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>Z</kbd>
+                <span class="sound">SNARE</span>
+                <audio src="./sounds/snare.wav" id="snare"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>X</kbd>
+                <span class="sound">TINK</span>
+                <audio src="./sounds/tink.wav" id="tink"></audio></br>
+            </div>
+            <div class="key">
+                <kbd>C</kbd>
+                <span class="sound">tom</span>
+                <audio src="./sounds/tom.wav" id="tom"></audio></br>
+    </div>
+
+    <script src="drumkit.js"></script>
+</body>
+
+</html>
